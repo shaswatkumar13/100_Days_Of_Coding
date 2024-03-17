@@ -1,0 +1,13 @@
+class Solution{
+
+  public static int CountPairs(LinkedList<Integer> head1, LinkedList<Integer> head2, intx){
+
+int ct=0;
+HashSet<Integer>, hs = new HashSet<>();
+for(Integer a: head2)
+    hs.add(a);
+for (Integer a: head1)
+    if(hs.contains(x-a))ct++;
+
+return ct;
+}
